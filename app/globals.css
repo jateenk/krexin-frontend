@@ -1,21 +1,33 @@
+/* 1. Import Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+/* 2. Tailwind resets and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 3. Root variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff;/* Black background */
+  --foreground:  #000000;/* White text */
+  --brand: #5ACD80;      /* Your brand color */
 }
 
+/* 4. (Optional) Dark mode prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* You can keep dark mode logic here if you want
+       a different scheme when user sets OS to dark mode.
+       For now, let's keep it the same as your main colors:
+    */
+    --background: #000000;
+    --foreground: #ffffff;
   }
 }
 
+/* 5. Global base styling */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }

@@ -1,3 +1,4 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,8 +10,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brand: {
+          DEFAULT: "#5ACD80", // Your brand color
+        },
+      },
+      fontFamily: {
+        sans: ["Montserrat", "sans-serif"],
       },
     },
   },

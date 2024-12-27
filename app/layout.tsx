@@ -1,23 +1,26 @@
 // app/layout.tsx
-import './globals.css';
-import { ReactNode } from 'react';
-import Navbar from '@/components/Navbar';
+import "./globals.css";
+import { ReactNode } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
-    title: 'CRXIn Frontend',
-    description: 'A Next.js standalone frontend for CRXIn Core',
+    title: "My App",
+    description: "Some description",
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en">
-        <body>
+        <body style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        {/* Keep the NavBar at the top */}
         <Navbar />
-        <main>{children}</main>
+
+        {/* Main content grows to fill the available space */}
+        <main style={{ flex: "1" }}>{children}</main>
+
+        {/* Footer at the bottom */}
+        <Footer />
         </body>
         </html>
     );
