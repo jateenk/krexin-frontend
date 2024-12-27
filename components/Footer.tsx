@@ -18,7 +18,7 @@ export default function Footer() {
                     width={100}
                     height={50}
                 />
-                <p className="text-white">© {new Date().getFullYear()} My Company Name</p>
+                <p className="text-white">© {new Date().getFullYear()} Krexin Inc</p>
             </div>
         </footer>
     );
