@@ -48,7 +48,7 @@ export default function InputForm() {
                 <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
                     <div className="flex flex-col space-y-1">
                         <label htmlFor="date" className="text-sm font-medium">
-                            Date:
+                            Probability Table Date:
                         </label>
                         <input
                             type="date"
